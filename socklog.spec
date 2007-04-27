@@ -3,25 +3,24 @@
 
 Summary:	A small and secure syslogd replacement for use with runit
 Name:		socklog
-Version:	2.0.3
+Version:	2.1.0
 Release:	%mkrel 1
 License:	BSD
 Group:		System/Base
 URL:		http://smarden.org/socklog/
-Source0:	http://smarden.org/socklog/%{name}-%{version}.tar.bz2
+Source0:	http://smarden.org/socklog/%{name}-%{version}.tar.gz
 Requires:	runit
 BuildRequires:	dietlibc-devel >= 0.20
 BuildRoot:	%{_tmppath}/%{name}-buildroot
 
 %description
-socklog cooperates with the runit package to create a small and
-secure replacement for syslogd. socklog supports system logging
-through Unix domain sockets (/dev/log) and UDP sockets
-(0.0.0.0:514) with the help of runit's runsvdir, runsv, and
-svlogd. socklog provides a different network logging concept, and
-also does log event notification. svlogd has built in log file
-rotation based on file size, so there is no need for any cron jobs
-to rotate the logs. socklog is small, secure, and reliable. 
+socklog cooperates with the runit package to create a small and secure
+replacement for syslogd. socklog supports system logging through Unix domain
+sockets (/dev/log) and UDP sockets (0.0.0.0:514) with the help of runit's
+runsvdir, runsv, and svlogd. socklog provides a different network logging
+concept, and also does log event notification. svlogd has built in log file
+rotation based on file size, so there is no need for any cron jobs to rotate
+the logs. socklog is small, secure, and reliable. 
 
 %prep
 
@@ -78,4 +77,3 @@ install -m755 %{name}-%{version}/man/*.8 %{buildroot}%{_mandir}/man8/
 %attr(0644,root,root) %{_mandir}/man8/socklog-conf.8*
 %attr(0644,root,root) %{_mandir}/man8/socklog.8*
 %attr(0644,root,root) %{_mandir}/man8/socklog-check.8*
-
