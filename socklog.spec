@@ -11,6 +11,7 @@ URL:		http://smarden.org/socklog/
 Source0:	http://smarden.org/socklog/%{name}-%{version}.tar.gz
 Requires:	runit
 BuildRequires:	dietlibc-devel >= 0.20
+BuildRoot:	%{_tmppath}/%{name}-buildroot
 
 %description
 socklog cooperates with the runit package to create a small and secure
