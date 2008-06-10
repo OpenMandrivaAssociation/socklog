@@ -1,12 +1,16 @@
+%define _enable_debug_packages %{nil}
+%define debug_package          %{nil}
+
 Summary:	A small and secure syslogd replacement for use with runit
 Name:		socklog
 Version:	2.1.0
-Release:	%mkrel 2
+Release:	%mkrel 3
 License:	BSD
 Group:		System/Base
 URL:		http://smarden.org/socklog/
 Source0:	http://smarden.org/socklog/%{name}-%{version}.tar.gz
 Requires:	runit
+BuildRequires:	dietlibc-devel >= 0.32
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
@@ -23,11 +27,10 @@ the logs. socklog is small, secure, and reliable.
 %setup -q -n admin
 
 %build
-%serverbuild
 
 pushd %{name}-%{version}/src
-    echo "gcc $CFLAGS -pipe" > conf-cc
-    echo "gcc $CFLAGS -s" > conf-ld
+    echo "diet -Os gcc -pipe" > conf-cc
+    echo "diet -Os gcc -static -s" > conf-ld
     make
 popd
 
