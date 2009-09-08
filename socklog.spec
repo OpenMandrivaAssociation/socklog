@@ -4,7 +4,7 @@
 Summary:	A small and secure syslogd replacement for use with runit
 Name:		socklog
 Version:	2.1.0
-Release:	%mkrel 4
+Release:	%mkrel 5
 License:	BSD
 Group:		System/Base
 URL:		http://smarden.org/socklog/
