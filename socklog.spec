@@ -76,3 +76,48 @@ rm -rf %{buildroot}
 %attr(0644,root,root) %{_mandir}/man8/socklog-conf.8*
 %attr(0644,root,root) %{_mandir}/man8/socklog.8*
 %attr(0644,root,root) %{_mandir}/man8/socklog-check.8*
+
+
+%changelog
+* Tue Sep 08 2009 Thierry Vignaud <tvignaud@mandriva.com> 2.1.0-5mdv2010.0
++ Revision: 433986
+- rebuild
+
+* Fri Aug 08 2008 Thierry Vignaud <tvignaud@mandriva.com> 2.1.0-4mdv2009.0
++ Revision: 269331
+- rebuild early 2009.0 package (before pixel changes)
+
+* Tue Jun 10 2008 Oden Eriksson <oeriksson@mandriva.com> 2.1.0-3mdv2009.0
++ Revision: 217546
+- rebuilt against dietlibc-devel-0.32
+
+* Tue May 13 2008 Oden Eriksson <oeriksson@mandriva.com> 2.1.0-2mdv2009.0
++ Revision: 206564
+- don't build it against dietlibc anymore
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+  + Thierry Vignaud <tvignaud@mandriva.com>
+    - kill re-definition of %%buildroot on Pixel's request
+
+* Fri Apr 27 2007 Oden Eriksson <oeriksson@mandriva.com> 2.1.0-1mdv2008.0
++ Revision: 18586
+- 2.1.0
+
+
+* Sun Mar 05 2006 Oden Eriksson <oeriksson@mandriva.com> 2.0.3-1mdk
+- 2.0.3 (Minor bugfixes)
+
+* Wed Oct 19 2005 Oden Eriksson <oeriksson@mandriva.com> 2.0.2-1mdk
+- 2.0.2
+
+* Mon Feb 07 2005 Oden Eriksson <oeriksson@mandrakesoft.com> 2.0.0-1mdk
+- 2.0.0
+
+* Sat Aug 28 2004 Franck Villaume <fvill@freesurf.fr> 1.5.0-1mdk
+- 1.5.0
+
+* Sat Aug 09 2003 Oden Eriksson <oden.eriksson@kvikkjokk.net> 1.2.0-1mdk
+- initial cooker contrib
+
