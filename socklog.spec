@@ -7,7 +7,7 @@ Version:	2.1.0
 Release:	6
 License:	BSD
 Group:		System/Base
-URL:		http://smarden.org/socklog/
+URL:		https://smarden.org/socklog/
 Source0:	http://smarden.org/socklog/%{name}-%{version}.tar.gz
 Requires:	runit
 BuildRequires:	dietlibc-devel >= 0.32
