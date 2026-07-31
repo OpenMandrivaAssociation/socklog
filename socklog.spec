@@ -3,7 +3,7 @@
 
 Summary:	A small and secure syslogd replacement for use with runit
 Name:		socklog
-Version:	2.1.1
+Version:	2.1.2
 Release:	1
 License:	BSD
 Group:		System/Base
